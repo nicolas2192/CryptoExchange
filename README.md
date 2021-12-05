@@ -1,9 +1,9 @@
 # CryptoExchange
 
-Cryptocurrency Exchange running on the Ethereum Network that allows any user to perform simple operations such as checking the balance, figuring out gas fees, selling ETH, among other operations.
+Cryptocurrency Exchange running on the Ethereum Network that allows users to perform simple operations such as checking their balance, figuring out gas fees, selling ETH, among other operations.
 
 <p align="center">
-  <img width="200" height="200" src="readme/eth_logo.svg">
+  <img width="175" height="175" src="readme/eth_logo.svg">
 </p>
 
 
@@ -14,18 +14,22 @@ Run the main script by typing `python main.py` on your terminal (set-up instruct
   <img width="763" height="419" src="readme/terminal.png">
 </p>
 
-**Account Address:** The wallet address provided in the JSON file
-**Account Balance:** The balance of the account. This value is provided in Wei, Ether and US dollars. 
+**Account Address:** The wallet address provided in the JSON file.
+
+**Account Balance:** The balance of the account. This value is provided in Wei, Ether and US dollars.
+
 **Latest Block:** The number of the latest block in the blockchain.
+
 **Test Exchanges:** Exchange rates that might be used later on.
+
 **Gas Price and Transaction Fees:** Shows the gas price and transaction fees in Wei, Gwei, Ether and USD. Notice that in order to perform a single transaction, you will have to pay around 7 US dollars. 
 
-## :milk:  :cow: :cow2:  :ear_of_rice: What are Ether, Gwei and Wei?
+## :ear_of_rice: What are Ether, Gwei and Wei?
 Wei is the smallest denomination of Ether, the cryptocurrency coin used on the Ethereum Network. While dollars are only divisible by 100, making pennies, the smallest denomination of the currency, Ether could be divided by 1,000,000,000,000,000,000. In other words, One ether = 1,000,000,000,000,000,000 Wei. 
 
 Gwei comes from Giga Wei, this is the measure used by most websites when talking about gas prices. One Ether = 1,000,000,000 gwei.
 
-Further reading [here](https://ethdocs.org/en/latest/ether.html#what-is-ether "ethdocs.org")
+Further reading [here](https://ethdocs.org/en/latest/ether.html#what-is-ether "ethdocs.org"){:target="_blank"}
 
 
 ## :fuelpump: What is Gas?
@@ -37,7 +41,7 @@ Transactions have a fixed **Gas Limit** of 21,000 units, the **Base Fee** depend
 
 To fetch the current gas rate we will use the EtherScan API while the CryptoCompare API will be used to convert Ether into fiat currencies. 
 
-Further reading [here](https://ethereum.org/en/developers/docs/gas/ "Ethereum.org")
+Further reading [here](https://ethereum.org/en/developers/docs/gas/ "Ethereum.org"){:target="_blank"}
 
 
 ## :wrench: Configuration
