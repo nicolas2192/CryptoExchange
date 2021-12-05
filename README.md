@@ -25,11 +25,11 @@ Run the main script by typing `python main.py` on your terminal (set-up instruct
 **Gas Price and Transaction Fees:** Shows the gas price and transaction fees in Wei, Gwei, Ether and USD. Notice that in order to perform a single transaction, you will have to pay around 7 US dollars. 
 
 ## :ear_of_rice: What are Ether, Gwei and Wei?
-Wei is the smallest denomination of Ether, the cryptocurrency coin used on the Ethereum Network. While dollars are only divisible by 100, making pennies, the smallest denomination of the currency, Ether could be divided by 1,000,000,000,000,000,000. In other words, One ether = 1,000,000,000,000,000,000 Wei. 
+Wei is the smallest denomination of Ether, the cryptocurrency coin used on the Ethereum Network. While dollars are only divisible by 100, making pennies, the smallest denomination of the currency. Ether, on the other hand, could be divided by 1,000,000,000,000,000,000. In other words, one ether = 1,000,000,000,000,000,000 Wei. 
 
-Gwei comes from Giga Wei, this is the measure used by most websites when talking about gas prices. One Ether = 1,000,000,000 gwei.
+Gwei comes from Giga Wei, this is the measure used by most websites such as EtherScan when refering to gas prices. One Ether = 1,000,000,000 gwei.
 
-Further reading [here](https://ethdocs.org/en/latest/ether.html#what-is-ether "ethdocs.org"){:target="_blank"}
+Further reading [here](https://ethdocs.org/en/latest/ether.html#what-is-ether "ethdocs.org")
 
 
 ## :fuelpump: What is Gas?
@@ -41,7 +41,7 @@ Transactions have a fixed **Gas Limit** of 21,000 units, the **Base Fee** depend
 
 To fetch the current gas rate we will use the EtherScan API while the CryptoCompare API will be used to convert Ether into fiat currencies. 
 
-Further reading [here](https://ethereum.org/en/developers/docs/gas/ "Ethereum.org"){:target="_blank"}
+Further reading [here](https://ethereum.org/en/developers/docs/gas/ "Ethereum.org")
 
 
 ## :wrench: Configuration
