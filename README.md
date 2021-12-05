@@ -47,7 +47,7 @@ Further reading [here](https://ethereum.org/en/developers/docs/gas/ "Ethereum.or
 ## :wrench: Configuration
 This script fetches data from multiple API endpoints. Let's take a look at them and how we can replicate the process by obtaining our own API’s keys, downloading all necessary packages and updating the JSON configuration file.
 
-**Infura**
+### Infura
 
 Infura will be the door to the Ethereum Network. Its API allows you to access and read data from the blockchain by connecting to a Ethereum node. Unlike the rest of the APIs in this script, Infura connection is carried out with the Web3 package.
 
@@ -65,14 +65,14 @@ Remember to choose the “Ethereum” option in the dropdown menu. Your API endp
 </p>
 
 
-**Web3**
+### Web3
 
 In the wake of Web 3.0, Web3 rose as a solution to easily connect to the blockchain, it is like an interface between you, the programmer, and the network. The installation is fairly simple, a pip install will do:
 
 `pip install web3` or `conda install -c conda-forge web3`
 
 
-**CryptoCompare**
+### CryptoCompare
 
 This website provides real exchanges for all major crypto and fiat currencies. Head to [CryptoCompare](https://www.cryptocompare.com/ "CryptoCompare") and sign in, then, on the API section of the web, click on “Get your free API”. If you are prompted to select the API permissions, choose the ones that will allow you to “read” data. Once set, go to your profile API settings by clicking on your avatar in the top right corner and selecting the “API keys” option. Here you will find the API key.
 
@@ -81,7 +81,7 @@ This website provides real exchanges for all major crypto and fiat currencies. H
 </p>
 
 
-**EtherScan**
+### EtherScan
 
 With a Friendly blockchain interface, this website allows you to easily check for transactions or block details, gas price, etc. Head to [EtherScan](https://etherscan.io/ "EtherScan"), sign in and create your API key by clicking on the “Add” blue button on the API Keys section. We will use this API to retrieve current gas prices.
 
@@ -90,7 +90,7 @@ With a Friendly blockchain interface, this website allows you to easily check fo
 </p>
 
 
-**JSON file**
+### JSON file
 
 Once you have all the keys and account details (if you don’t have a wallet address you can simply pick one randomly from EtherScan or create your own using [MetaMask](https://metamask.io/ "MetaMask")) we will proceed to update the JSON configuration file (`credentials_ex.json`). This is a dictionary-like object, so we just need to update the value item. Save it as `credentials.json` in the `data` folder.
 
