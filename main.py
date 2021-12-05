@@ -22,7 +22,7 @@ class ExchangeSession(object):
         cred_path: String. Credentials JSON file path.
     
     Returns:
-        Session object instantiated.
+        ExchangeSession object instantiated.
     """
     
     def __init__(self, cred_path):
