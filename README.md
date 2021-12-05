@@ -11,7 +11,7 @@ Cryptocurrency Exchange running on the Ethereum Network that allows users to per
 Run the main script by typing `python main.py` on your terminal (set-up instructions down below) If everything is alright, you will end up with something like this:
 
 <p align="center">
-  <img width="763" height="419" src="readme/terminal.png">
+  <img width="687" height="377" src="readme/terminal.png">
 </p>
 
 **Account Address:** The wallet address provided in the JSON file.
@@ -27,7 +27,7 @@ Run the main script by typing `python main.py` on your terminal (set-up instruct
 ## :ear_of_rice: What are Ether, Gwei and Wei?
 Wei is the smallest denomination of Ether, the cryptocurrency coin used on the Ethereum Network. While dollars are only divisible by 100, making pennies, the smallest denomination of the currency. Ether, on the other hand, could be divided by 1,000,000,000,000,000,000. In other words, one ether = 1,000,000,000,000,000,000 Wei. 
 
-Gwei comes from Giga Wei, this is the measure used by most websites such as EtherScan when refering to gas prices. One Ether = 1,000,000,000 gwei.
+Gwei comes from Giga Wei. This is the measure used by most websites such as EtherScan when refering to gas prices. One Ether = 1,000,000,000 gwei.
 
 Further reading [here](https://ethdocs.org/en/latest/ether.html#what-is-ether "ethdocs.org")
 
@@ -37,7 +37,7 @@ Gas fees, Gas units or simple Gas refers to the commission anyone will have to p
 
 Calculating the total transaction fee works as follows: Gas units (limit) * (Base fee + Tip).
 
-Transactions have a fixed **Gas Limit** of 21,000 units, the **Base Fee** depends on supply and demand, this value is given in Gwei and the **Tip** refers to a tip or additional payment given to the miner to expedite the process.
+Transactions have a fixed **Gas Limit** of 21,000 units, the **Base Fee** is given in GWei and depends on supply and demand, and the **Tip** refers to an additional non-compulsory payment given to the miner to expedite the process.
 
 To fetch the current gas rate we will use the EtherScan API while the CryptoCompare API will be used to convert Ether into fiat currencies. 
 
@@ -48,6 +48,7 @@ Further reading [here](https://ethereum.org/en/developers/docs/gas/ "Ethereum.or
 This script fetches data from multiple API endpoints. Let's take a look at them and how we can replicate the process by obtaining our own API’s keys, downloading all necessary packages and updating the JSON configuration file.
 
 **Infura**
+
 Infura will be the door to the Ethereum Network. Its API allows you to access and read data from the blockchain by connecting to a Ethereum node. Unlike the rest of the APIs in this script, Infura connection is carried out with the Web3 package.
 
 Head to [Infura](https://infura.io/ "Infura"), sign up, and create a new project.
@@ -55,45 +56,42 @@ Head to [Infura](https://infura.io/ "Infura"), sign up, and create a new project
 Remember to choose the “Ethereum” option in the dropdown menu. Your API endpoint will be something similar to: `https://mainnet.infura.io/v3/YOUR_API_KEY`
 
 <p align="center">
-  <img width="416" height="345" src="readme/infura1.png">
+  <img width="370" height="307" src="readme/infura1.png">
 </p>
 
 
 <p align="center">
-  <img width="746" height="601" src="readme/infura2.png">
+  <img width="560" height="451" src="readme/infura2.png">
 </p>
 
 
 **Web3**
+
 In the wake of Web 3.0, Web3 rose as a solution to easily connect to the blockchain, it is like an interface between you, the programmer, and the network. The installation is fairly simple, a pip install will do:
 
-`pip install web3`
-
-`conda install -c conda-forge web3`
+`pip install web3` or `conda install -c conda-forge web3`
 
 
 **CryptoCompare**
+
 This website provides real exchanges for all major crypto and fiat currencies. Head to [CryptoCompare](https://www.cryptocompare.com/ "CryptoCompare") and sign in, then, on the API section of the web, click on “Get your free API”. If you are prompted to select the API permissions, choose the ones that will allow you to “read” data. Once set, go to your profile API settings by clicking on your avatar in the top right corner and selecting the “API keys” option. Here you will find the API key.
 
 <p align="center">
-  <img width="746" height="666" src="readme/cc1.png">
-</p>
-
-
-<p align="center">
-  <img width="972" height="896" src="readme/cc2.png">
+  <img width="787" height="725" src="readme/cc1.png">
 </p>
 
 
 **EtherScan**
+
 With a Friendly blockchain interface, this website allows you to easily check for transactions or block details, gas price, etc. Head to [EtherScan](https://etherscan.io/ "EtherScan"), sign in and create your API key by clicking on the “Add” blue button on the API Keys section. We will use this API to retrieve current gas prices.
 
 <p align="center">
-  <img width="987" height="487" src="readme/scan1.png">
+  <img width="809" height="399" src="readme/scan1.png">
 </p>
 
 
 **JSON file**
+
 Once you have all the keys and account details (if you don’t have a wallet address you can simply pick one randomly from EtherScan or create your own using [MetaMask](https://metamask.io/ "MetaMask")) we will proceed to update the JSON configuration file (`credentials_ex.json`). This is a dictionary-like object, so we just need to update the value item. Save it as `credentials.json` in the `data` folder.
 
 ```
@@ -105,7 +103,7 @@ Once you have all the keys and account details (if you don’t have a wallet add
 "etherscan_api": "YOUR_API_KEY"}
 ```
 
-### :computer: Technology stack
+## :computer: Technology stack
 Written in python 3. Main modules:
 
 **Web3** -> Blockchain Network connection.
@@ -115,7 +113,7 @@ Written in python 3. Main modules:
 **JSON** -> Files handling.
 
 
-### :file_folder: Folder structure
+## :file_folder: Folder structure
 ```
 └── project
     ├── .gitignore
