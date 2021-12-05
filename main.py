@@ -4,6 +4,7 @@
 # TO DO:
 # -- Add a sell function.
 # -- Add Argparse features.
+# -- Friendly interface.
 
 # IMPORTS
 import json
@@ -19,31 +20,35 @@ class ExchangeSession(object):
     
     Parameters:
         cred_path: String. Credentials JSON file path.
-        address_account: String. User's address account.
     
     Returns:
         Session object instantiated.
     """
     
-    def __init__(self, cred_path, address_account):
+    def __init__(self, cred_path):
         """
         Init method.
         
         Parameters:
             cred_path: String. Credentials JSON file path.
-            address_account: String. User's address account.
             
         Returns:
             Instance of the class.
         """
         
+        # Initial attributes and login details.
         self.credentials = self.load_credentials(cred_path)
-        self.account = address_account
-        self.infura = self.infura_connection(self.credentials["infura_url"])
+        self.account = self.credentials["account_address"]
+        self.public_key = self.credentials["public_key"]
+        self.private_key = self.credentials["private_key"]
         self.balance_wei = None
         self.balance_eth = None
         self.balance_fiat = None
         
+        # Setting infura connection.
+        self.infura = self.infura_connection(self.credentials["infura_url"])
+        
+        # Setting connection time.
         self.init_time = datetime.datetime.utcnow().strftime("%m/%d/%Y, %H:%M:%S")
         
         
@@ -244,26 +249,30 @@ class ExchangeSession(object):
             return {"WEI": self.balance_wei, "ETH": self.balance_eth}
 
 
+
 if __name__ == '__main__':
     
     # Loading Credentials
     creds = "data/credentials.json"
     
     # Initializing 
-    account_address = "0xDA8bB5Cf55C5aD7ebf64f24d5eb3fa95B5921230"
-    sess = ExchangeSession(creds, account_address)
+    sess = ExchangeSession(creds)
     print("\nAccount address:", sess.account)
     
     # Fetch account's balance in dollars
-    print("\nAccount Balance USD:", sess.get_balance("USD"))
+    balance = sess.get_balance("USD")
+    print("\nAccount Balance USD:", balance)
     
     # Fetch last block
-    print("\nLatest block:", sess.latest_block())
+    last_block = sess.latest_block()
+    print("\nLatest block:", last_block)
     
     # Retrieve multiple exchanges
-    print("\nTest exchanges:", sess.get_exchange_rates(["ETH", "BTC"], ["BTC", "ETH", "USD", "EUR"]))
+    x_rates = sess.get_exchange_rates(["ETH", "BTC"], ["BTC", "ETH", "USD", "EUR"])
+    print("\nTest exchanges:", x_rates)
     
     # Compute current gas price and transaction fee
-    print("\nGas price and Transaction fee in USD:", sess.compute_transaction_fee("USD"))
-
-    print("\nProcess Completed.")
+    gas_fees = sess.compute_transaction_fee("USD")
+    print("\nGas price and Transaction fee in USD:", gas_fees)
+    
+    print("\nProcess Completed!")
