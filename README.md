@@ -1,3 +1,43 @@
+# CryptoExchange
+
+Cryptocurrency Exchange running on the Ethereum Network that allows any user to perform simple operations such as checking the balance, figuring out gas fees, selling ETH, among other operations.
+
+<p align="center">
+  <img width="500" height="500" src="readme/eth_logo.svg">
+</p>
+
+
+## :coin: Connecting to the Blockchain
+Run the main script by typing python main.py on your terminal (set-up instructions down below) If everything is alright, you will end up with something like this:
+
+<p align="center">
+  <img width="808" height="551" src="readme/terminal.png">
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Data Project README file
 
 The README file describes the essence of the project playing the most important role. Most visitors will simply scroll down about twice on the README and leave if they are not interested. So, the README file should provide the reason **why** to checkout your project!!!). 
